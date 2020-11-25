@@ -6,14 +6,16 @@ body {
 
 .wrapper {
   max-width: 800px;
-  margin: 50px auto;
+  margin: auto;
   border-style: solid;
-  border-color: blue;
+  border-color: #0a1160;
+  border-width: 20px;
 }
 
 h1 {
   font-weight: 200;
   font-size: 3em;
+  padding-top: 50px;
   margin: 0 0 0.1em 0;
 }
 
@@ -32,4 +34,9 @@ a {
 
 canvas {
   margin-bottom: 45px;
+}
+
+pre {
+  font-family: Comic;
+  font-size: 95%;
 }
