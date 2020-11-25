@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Part 3 Radar Chart </title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1> <b> Activity Before the COVID-19 Pandemic </b> </h1>
+      <h2> <i> Breakout Room 3 </i> </h2>
+      <canvas id="preCOVID" width="1800" height="1000"></canvas>
+
+      <ul style="border:solid;border-color:#0a1160;">
+        <b><p style="font-size:120%;"><u> Key: </u></p></b>
+        <p> <pre> Home: 1         Commute: 2         Work: 3 </pre> </p>
+        <p> <pre> School: 4         Gym: 5          Visit Friends/Family: 6 </pre> </p>
+        <p> <pre> Sports: 7         Bar/Restaurant: 8         Shopping: 9         Walk: 10 </pre> </p>
+      </ul>
+
+      <h1> <b> Activity During the COVID-19 Pandemic </b> </h1>
+      <h2> <i> Breakout Room 3 </i> </h2>
+      <canvas id="durCOVID" width="1800" height="1000"></canvas>
+    </div>
+
+    <script>
+    var hours = ["12am","2am","4am","6am","8am","10am","12pm","2pm","4pm","6pm","8pm","10pm"];
+    // For drawing the lines
+    var Eric_pre = [1,1,1,2,3,4,4,3,6,2,1,1];
+    var Mikaelyn_pre = [1,1,1,2,3,3,3,3,7,4,1,1];
+    var Vlada_pre = [1,1,1,2,5,3,3,3,6,6,8,6];
+
+    var Eric_dur = [1,1,1,1,1,1,1,1,2,5,1,1];
+    var Mikaelyn_dur = [1,1,1,1,1,1,9,1,10,1,1,1];
+    var Vlada_dur = [1,1,1,1,1,1,3,3,3,1,1,1];
+
+    var ctx1 = document.getElementById("preCOVID");
+    var preCOVID = new Chart(ctx1, {
+      type: 'radar',
+      data: {
+        labels: hours,
+        datasets: [
+          {
+            data: Eric_pre,
+            label: "Eric",
+            borderColor: "#3e95cd",
+            fill: false
+          },
+          {
+            data: Mikaelyn_pre,
+            label: "Mikaelyn",
+            borderColor: "#8e5ea2",
+            fill: false
+          },
+          {
+            data: Vlada_pre,
+            label: "Vlada",
+            borderColor: "#3cba9f",
+            fill: false
+          }
+        ]
+      },
+      options: {
+        legend: { display: true },
+        }
+      });
+
+      var ctx2 = document.getElementById("durCOVID");
+      var durCOVID = new Chart(ctx2, {
+        type: 'radar',
+        data: {
+          labels: hours,
+          datasets: [
+            {
+              data: Eric_dur,
+              label: "Eric",
+              borderColor: "#3e95cd",
+              fill: false
+            },
+            {
+              data: Mikaelyn_dur,
+              label: "Mikaelyn",
+              borderColor: "#8e5ea2",
+              fill: false
+            },
+            {
+              data: Vlada_dur,
+              label: "Vlada",
+              borderColor: "#3cba9f",
+              fill: false
+            }
+          ]
+        },
+        options: {
+          legend: { display: true },
+          }
+        });
+    </script>
+  </body>
+  <p> <h3> <b> Here are our results! Feel free to critique us. </b> </h3> </p>
+  <p> <br> </p>
+</html>
