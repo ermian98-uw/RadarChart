@@ -22,13 +22,13 @@
     <script>
     var hours = ["12am","2am","4am","6am","8am","10am","12pm","2pm","4pm","6pm","8pm","10pm"];
     // For drawing the lines
-    var Eric_pre = [1,2,3];
-    var Mikaelyn_pre = [1,2,3];
-    var Vlada_pre = [1,2,3];
+    var Eric_pre = ["Home","Home","Home","Commuting","Work","School","School","Work","Visiting Friends/Family","Commuting","Home","Home"];
+    var Mikaelyn_pre = ["Home","Home","Home","Commuting","Work","Work","Work","Work","Sports Practice","School","Home","Home"];
+    var Vlada_pre = ["Home","Home","Home","Commuting","Gym","Work","Work","Work","Visiting Friends/Family","Visiting Friends/Family","Bar/Restaurant","Visiting Friends/Family"];
 
-    var Eric_dur = [1,2,3];
-    var Mikaelyn_dur = [1,2,3];
-    var Vlada_dur = [1,2,3];
+    var Eric_dur = ["Home","Home","Home","Home","Home","Home","Home","Home","Commuting","Gym","Home","Home"];
+    var Mikaelyn_dur = ["Home","Home","Home","Home","Home","Home","Shopping","Home","Walk","Home","Home","Home"];
+    var Vlada_dur = ["Home","Home","Home","Home","Home workout","Home","Work","Work","Work","Home","Home","Home"];
 
     var ctx1 = document.getElementById("preCOVID");
     var preCOVID = new Chart(ctx1, {
