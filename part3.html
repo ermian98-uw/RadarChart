@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Part 3 Radar Chart </title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1> Activity Before COVID-19 Pandemic </h1>
+      <h2> Breakout Room 3 </h2>
+      <canvas id="preCOVID" width="1800" height="1000"></canvas>
+
+      <h1> Activity During the COVID-19 Pandemic </h1>
+      <h2> Breakout Room 3 </h2>
+      <canvas id="durCOVID" width="1800" height="1000"></canvas>
+    </div>
+
+    <script>
+    var hours = ["12am","2am","4am","6am","8am","10am","12pm","2pm","4pm","6pm","8pm","10pm"];
+    // For drawing the lines
+    var Eric_pre = [1,2,3];
+    var Mikaelyn_pre = [1,2,3];
+    var Vlada_pre = [1,2,3];
+
+    var Eric_dur = [1,2,3];
+    var Mikaelyn_dur = [1,2,3];
+    var Vlada_dur = [1,2,3];
+
+    var ctx1 = document.getElementById("preCOVID");
+    var preCOVID = new Chart(ctx1, {
+      type: 'radarChart',
+      data: {
+        labels: hours,
+        datasets: [
+          {
+            data: Eric_pre,
+            label: "Eric",
+            borderColor: "#3e95cd",
+            fill: false
+          },
+          {
+            data: Eric_pre,
+            label: "Mikaelyn",
+            borderColor: "#8e5ea2",
+            fill: false
+          },
+          {
+            data: Eric_pre,
+            label: "Vlada",
+            borderColor: "#3cba9f",
+            fill: false
+          }
+        ]
+      },
+      options: {
+        legend: { display: false },
+        }
+      });
+
+      var ctx2 = document.getElementById("durCOVID");
+      var durCOVID = new Chart(ctx2, {
+        type: 'radarChart',
+        data: {
+          labels: hours,
+          datasets: [
+            {
+              data: Eric_dur,
+              label: "Eric",
+              borderColor: "#3e95cd",
+              fill: false
+            },
+            {
+              data: Mikaelyn_dur,
+              label: "Mikaelyn",
+              borderColor: "#8e5ea2",
+              fill: false
+            },
+            {
+              data: Vlada_dur,
+              label: "Vlada",
+              borderColor: "#3cba9f",
+              fill: false
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          }
+        });
+    </script>
+
+  </body>
+  <p> <b> Here are our results! </b> </p>
+</html>
