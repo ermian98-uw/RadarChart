@@ -10,26 +10,19 @@
 
   <body>
     <div class="wrapper">
-      <h1> Activity Before the COVID-19 Pandemic </h1>
-      <h2> Breakout Room 3 </h2>
+      <h1> <b> Activity Before the COVID-19 Pandemic </b> </h1>
+      <h2> <i> Breakout Room 3 </i> </h2>
       <canvas id="preCOVID" width="1800" height="1000"></canvas>
 
-      <b><P>Key</P></b>
-      <ul>
-        <p>Home = 1</p>
-        <p>Commuting = 2</p>
-        <p>Work = 3</p>
-        <p>School = 4</p>
-        <p>Gym = 5</p>
-        <p>Visiting Friends/Family = 6</p>
-        <p>Sports Practice = 7</p>
-        <p>Bar/Restaurant = 8</p>
-        <p>Shopping = 9</p>
-        <p>Walk = 10</p>
-        
-      </ul> 
-      <h1> Activity During the COVID-19 Pandemic </h1>
-      <h2> Breakout Room 3 </h2>
+      <ul style="border:solid;border-color:#0a1160;">
+        <b><p style="font-size:120%;"><u> Key: </u></p></b>
+        <p> <pre> Home: 1         Commute: 2         Work: 3 </pre> </p>
+        <p> <pre> School: 4         Gym: 5          Visit Friends/Family: 6 </pre> </p>
+        <p> <pre> Sports: 7         Bar/Restaurant: 8         Shopping: 9         Walk: 10 </pre> </p>
+      </ul>
+
+      <h1> <b> Activity During the COVID-19 Pandemic </b> </h1>
+      <h2> <i> Breakout Room 3 </i> </h2>
       <canvas id="durCOVID" width="1800" height="1000"></canvas>
     </div>
 
@@ -71,7 +64,7 @@
         ]
       },
       options: {
-        legend: { display: false },
+        legend: { display: true },
         }
       });
 
@@ -102,10 +95,11 @@
           ]
         },
         options: {
-          legend: { display: false },
+          legend: { display: true },
           }
         });
     </script>
   </body>
-  <p> <b> Here are our results! </b> </p>
+  <p> <h3> <b> Here are our results! Feel free to critique us. </b> </h3> </p>
+  <p> <br> </p>
 </html>
